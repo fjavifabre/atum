@@ -27,3 +27,12 @@ if [ $? -ne 0 ]; then
 	# Terminate script and outputs 3
     exit 3
 fi
+
+showinfo "Running tests ..."
+ctest
+if [ $? -ne 0 ]; then
+    error "Error: there are failed tests!"
+    exit 4
+fi
+
+workingprocess "All tests compile and pass."
