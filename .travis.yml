@@ -28,7 +28,10 @@ after_success:
   # Uploading report to CodeCov
   - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
 
+notifications:
+  email:
+    - fjavifabre@gmail.com
 
 env:
   global:
-- LANG="en_US.UTF-8"
+  - LANG="en_US.UTF-8"
