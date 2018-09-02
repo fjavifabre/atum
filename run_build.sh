@@ -1,4 +1,4 @@
-! /bin/bash
+# ! /bin/bash
 # Bash Script that builds project
 
 RED='\033[0;31m' # Red
