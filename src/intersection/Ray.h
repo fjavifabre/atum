@@ -1,16 +1,17 @@
- #pragma once
+#pragma once
 
 #include <glm/vec3.hpp>
 
-namespace atum {
-
+namespace atum
+{
 class Ray
 {
-public:
+   public:
     Ray(glm::vec3 origin, glm::vec3 direction);
-public:
+
+   public:
     glm::vec3 origin;
     glm::vec3 direction;
 };
 
-}
+}  // namespace atum

@@ -4,8 +4,9 @@
 
 namespace atum
 {
-    SurfaceInteraction::SurfaceInteraction()
-        : t(std::numeric_limits<float>::infinity())
-        , shape(nullptr)
-    {}
+SurfaceInteraction::SurfaceInteraction()
+    : t(std::numeric_limits<float>::infinity())
+    , shape(nullptr)
+{
 }
+}  // namespace atum
