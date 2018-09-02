@@ -56,6 +56,11 @@ add_library(atum STATIC ${SOURCE_FILES})
 #	TESTING using Google Test
 #-------------------------------------------------------------------------------
 
+# If windows just fix the linking problem
+if (WIN32)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif (WIN32)
+
 add_subdirectory(external/google-test)
 
 enable_testing()
