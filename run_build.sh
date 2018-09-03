@@ -15,7 +15,7 @@ allert () { echo -e "${RED}$1${NC}"; }
 mkdir -p build
 cd build
 workingprocess "Build folder OK"
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
 workingprocess "CMake OK"
 make -j8
 # Checks if last comand didn't output 0
@@ -29,7 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 showinfo "Running tests ..."
-ctest
+ctest -V -j 2
 if [ $? -ne 0 ]; then
     error "Error: there are failed tests!"
     exit 4
